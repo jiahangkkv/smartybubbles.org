@@ -1,0 +1,1072 @@
+/* 
+   Smarty Bubbles - Main Stylesheet
+   Design: Responsive, colorful, with clear visual hierarchy
+*/
+
+/* ========== Base Styles ========== */
+:root {
+    /* Color variables */
+    --primary-color: #4d6de3;    /* Primary: Blue */
+    --secondary-color: #ff6b6b;  /* Secondary: Pink */
+    --accent-color: #feca57;     /* Accent: Yellow */
+    --dark-color: #2c3e50;       /* Dark: For text */
+    --light-color: #f9f9f9;      /* Light: For backgrounds */
+    --success-color: #26de81;    /* Green: For success states */
+    --warning-color: #fd9644;    /* Orange: For warning states */
+    --error-color: #fc5c65;      /* Red: For error states */
+    --gradient-start: #4d6de3;   /* Gradient start color */
+    --gradient-end: #7a96ff;     /* Gradient end color */
+    
+    /* Font variables */
+    --heading-font: 'Poppins', sans-serif;
+    --body-font: 'Open Sans', sans-serif;
+    
+    /* Spacing variables */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 5rem;
+    
+    /* Border radius */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 24px;
+    
+    /* Transitions */
+    --transition-fast: 0.3s ease;
+    --transition-normal: 0.5s ease;
+    --transition-slow: 0.8s ease;
+    
+    /* Bubble colors */
+    --bubble-color-1: rgba(255, 107, 107, 0.5);  /* Pink */
+    --bubble-color-2: rgba(254, 202, 87, 0.5);   /* Yellow */
+    --bubble-color-3: rgba(38, 222, 129, 0.5);   /* Green */
+    --bubble-color-4: rgba(87, 101, 242, 0.5);   /* Blue */
+    --bubble-color-5: rgba(153, 102, 255, 0.5);  /* Purple */
+}
+
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--dark-color);
+    line-height: 1.6;
+    background-color: var(--light-color);
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Global bubble background */
+.bubble-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.bubble-bg .bubble {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.6;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    animation: bubbleFloat 20s linear infinite;
+    bottom: -100px;
+}
+
+@keyframes bubbleFloat {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-1500px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Background bubble variations */
+.bubble-bg .bubble:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    left: 10%;
+    background-color: var(--bubble-color-1);
+    animation-delay: 0s;
+    animation-duration: 21s;
+}
+
+.bubble-bg .bubble:nth-child(2) {
+    width: 60px;
+    height: 60px;
+    left: 20%;
+    background-color: var(--bubble-color-2);
+    animation-delay: 2s;
+    animation-duration: 18s;
+}
+
+.bubble-bg .bubble:nth-child(3) {
+    width: 40px;
+    height: 40px;
+    left: 35%;
+    background-color: var(--bubble-color-3);
+    animation-delay: 4s;
+    animation-duration: 25s;
+}
+
+.bubble-bg .bubble:nth-child(4) {
+    width: 70px;
+    height: 70px;
+    left: 50%;
+    background-color: var(--bubble-color-4);
+    animation-delay: 6s;
+    animation-duration: 22s;
+}
+
+.bubble-bg .bubble:nth-child(5) {
+    width: 50px;
+    height: 50px;
+    left: 65%;
+    background-color: var(--bubble-color-5);
+    animation-delay: 8s;
+    animation-duration: 19s;
+}
+
+.bubble-bg .bubble:nth-child(6) {
+    width: 90px;
+    height: 90px;
+    left: 80%;
+    background-color: var(--bubble-color-1);
+    animation-delay: 10s;
+    animation-duration: 24s;
+}
+
+.bubble-bg .bubble:nth-child(7) {
+    width: 55px;
+    height: 55px;
+    left: 15%;
+    background-color: var(--bubble-color-2);
+    animation-delay: 5s;
+    animation-duration: 20s;
+}
+
+.bubble-bg .bubble:nth-child(8) {
+    width: 65px;
+    height: 65px;
+    left: 40%;
+    background-color: var(--bubble-color-3);
+    animation-delay: 7s;
+    animation-duration: 23s;
+}
+
+.bubble-bg .bubble:nth-child(9) {
+    width: 45px;
+    height: 45px;
+    left: 55%;
+    background-color: var(--bubble-color-4);
+    animation-delay: 9s;
+    animation-duration: 17s;
+}
+
+.bubble-bg .bubble:nth-child(10) {
+    width: 75px;
+    height: 75px;
+    left: 75%;
+    background-color: var(--bubble-color-5);
+    animation-delay: 11s;
+    animation-duration: 26s;
+}
+
+.bubble-bg .bubble:nth-child(11) {
+    width: 85px;
+    height: 85px;
+    left: 5%;
+    background-color: var(--bubble-color-4);
+    animation-delay: 13s;
+    animation-duration: 22s;
+}
+
+.bubble-bg .bubble:nth-child(12) {
+    width: 35px;
+    height: 35px;
+    left: 90%;
+    background-color: var(--bubble-color-3);
+    animation-delay: 15s;
+    animation-duration: 18s;
+}
+
+/* ========== Content Styles ========== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    line-height: 1.3;
+    margin-bottom: var(--spacing-sm);
+    color: var(--dark-color);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    position: relative;
+}
+
+h2:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    margin: var(--spacing-xs) auto;
+    border-radius: var(--border-radius-sm);
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+p {
+    margin-bottom: var(--spacing-sm);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+ul {
+    list-style-position: inside;
+    margin-bottom: var(--spacing-sm);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-sm) 0;
+    position: relative;
+    z-index: 2;
+}
+
+section {
+    padding: var(--spacing-lg) 0;
+    position: relative;
+}
+
+/* Translucent content background to improve readability */
+.about-game, .game-tips, .reviews, .related-games {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin: var(--spacing-md) 0;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.highlight {
+    color: var(--secondary-color);
+}
+
+/* 部分标题添加泡泡图标 */
+.section-title-bubble {
+    display: inline-block;
+    position: relative;
+}
+
+.section-title-bubble:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--bubble-color-2);
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+    animation: pulse 2s infinite;
+}
+
+.section-title-bubble:after {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: var(--bubble-color-4);
+    border-radius: 50%;
+    margin-left: 10px;
+    vertical-align: middle;
+    animation: pulse 2s infinite 0.5s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+}
+
+/* 添加卡片悬浮效果 */
+.game-card, .review-card {
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.game-card:hover, .review-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ========== 头部样式 ========== */
+.header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.bubble-icon {
+    font-size: 2rem;
+    margin-right: var(--spacing-xs);
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+.main-nav li {
+    margin-left: var(--spacing-md);
+}
+
+.main-nav a {
+    color: var(--dark-color);
+    font-weight: 600;
+    position: relative;
+}
+
+.main-nav a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width var(--transition-fast);
+}
+
+.main-nav a:hover:after {
+    width: 100%;
+}
+
+/* ========== 英雄区域样式 ========== */
+.hero {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    color: white;
+    padding: var(--spacing-xl) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: var(--spacing-sm);
+    text-align: left;
+}
+
+.hero h2:after {
+    display: none;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--dark-color);
+    padding: 12px 30px;
+    border-radius: var(--border-radius-md);
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    color: var(--dark-color);
+}
+
+/* Bubble Decorations */
+.bubble-decorations {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: float 8s infinite ease-in-out;
+}
+
+.b1 {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 107, 107, 0.7);
+    top: 20%;
+    right: 10%;
+    animation-delay: 0s;
+}
+
+.b2 {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(254, 202, 87, 0.7);
+    top: 50%;
+    right: 20%;
+    animation-delay: 1s;
+}
+
+.b3 {
+    width: 120px;
+    height: 120px;
+    background-color: rgba(38, 222, 129, 0.7);
+    top: 30%;
+    right: 35%;
+    animation-delay: 2s;
+}
+
+.b4 {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(87, 101, 242, 0.7);
+    top: 70%;
+    right: 5%;
+    animation-delay: 3s;
+}
+
+.b5 {
+    width: 85px;
+    height: 85px;
+    background-color: rgba(153, 102, 255, 0.7);
+    top: 60%;
+    right: 30%;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* ========== 游戏区域样式 ========== */
+.game-section {
+    background-color: white;
+    padding: var(--spacing-lg) 0;
+}
+
+.game-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%; /* 4:3 纵横比 */
+    background-color: #eee;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#game-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 5;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(77, 109, 227, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s linear infinite;
+    margin-bottom: var(--spacing-sm);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.game-controls {
+    margin-top: var(--spacing-md);
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.game-controls p {
+    display: flex;
+    align-items: center;
+}
+
+.game-controls i {
+    margin-right: 5px;
+    color: var(--primary-color);
+}
+
+/* ========== 游戏介绍区域样式 ========== */
+.about-game {
+    background-color: var(--light-color);
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+}
+
+.game-info {
+    flex: 2;
+    min-width: 300px;
+}
+
+.game-features {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.game-features ul {
+    list-style: none;
+}
+
+.game-features li {
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+}
+
+.game-features i {
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* ========== 游戏技巧区域样式 ========== */
+.game-tips {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="%234d6de3" opacity="0.1"/></svg>');
+    background-size: 200px;
+}
+
+.tips-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+}
+
+.beginner-tips, .advanced-tips {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.beginner-tips h3, .advanced-tips h3 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
+}
+
+.beginner-tips ul, .advanced-tips ul {
+    list-style: none;
+}
+
+.beginner-tips li, .advanced-tips li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.beginner-tips li:before, .advanced-tips li:before {
+    content: '•';
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* ========== 用户评价区域样式 ========== */
+.reviews {
+    background-color: white;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.review-card {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform var(--transition-fast);
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.stars {
+    color: var(--warning-color);
+    margin-bottom: var(--spacing-xs);
+    font-size: 1.2rem;
+}
+
+.reviewer {
+    font-style: italic;
+    text-align: right;
+    margin-top: var(--spacing-xs);
+    color: #666;
+}
+
+/* ========== Related Games Area Styles ========== */
+.related-games {
+    background-color: var(--light-color);
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.game-card {
+    background: white;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform var(--transition-fast);
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.game-preview {
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.game-preview:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    transition: background var(--transition-fast);
+}
+
+.game-card:hover .game-preview:before {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.bubble-spinner {
+    background: linear-gradient(135deg, #4d6de3, #26de81);
+}
+
+.bubble-woods {
+    background: linear-gradient(135deg, #26de81, #feca57);
+}
+
+.bubble-charms {
+    background: linear-gradient(135deg, #fc5c65, #fd9644);
+}
+
+.game-card h3 {
+    padding: var(--spacing-sm) var(--spacing-sm) 0;
+    font-size: 1.2rem;
+}
+
+.game-card p {
+    padding: 0 var(--spacing-sm) var(--spacing-sm);
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* ========== Platform Information Area Styles ========== */
+.platforms-info {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="%234d6de3" opacity="0.1"/></svg>');
+    background-size: 200px;
+    padding: var(--spacing-lg) 0;
+}
+
+.platforms-intro {
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    font-size: 1.1rem;
+}
+
+.platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.platform-card {
+    background: white;
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-md);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.platform-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.platform-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-sm);
+}
+
+.platform-icon i {
+    font-size: 1.8rem;
+}
+
+.platform-card h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.platform-card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.game-attribution {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #999;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Add a new background class for game preview */
+.bubble-classic {
+    background: linear-gradient(135deg, #26de81, #4d6de3);
+}
+
+/* ========== 页脚样式 ========== */
+.footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: var(--spacing-lg) 0 var(--spacing-sm);
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-lg);
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.footer-logo h3 {
+    color: white;
+    margin: 0 0 0 var(--spacing-xs);
+}
+
+.footer-links ul {
+    list-style: none;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: var(--spacing-xs);
+}
+
+.footer-links a {
+    color: #ddd;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-social {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.footer-social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: background-color var(--transition-fast);
+}
+
+.footer-social a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: var(--spacing-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+.footer-bottom a {
+    color: #ddd;
+}
+
+.footer-bottom a:hover {
+    color: white;
+}
+
+/* ========== 响应式设计 ========== */
+@media (max-width: 992px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+    
+    .bubble-decorations {
+        width: 30%;
+    }
+    
+    .platforms-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.6rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        padding: var(--spacing-md);
+        border-radius: var(--border-radius-md);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity var(--transition-fast);
+    }
+    
+    .main-nav.active ul {
+        opacity: 1;
+        pointer-events: all;
+    }
+    
+    .main-nav li {
+        margin: var(--spacing-xs) 0;
+    }
+    
+    .bubble-decorations {
+        display: none;
+    }
+    
+    .game-controls {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-xs);
+    }
+    
+    .footer-content > div {
+        width: 100%;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .platforms-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 95%;
+    }
+    
+    section {
+        padding: var(--spacing-md) 0;
+    }
+    
+    .hero {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    
+    .cta-button {
+        display: block;
+        text-align: center;
+    }
+    
+    .game-container {
+        padding-bottom: 100%; /* 1:1 纵横比，在小屏幕上提供更大的可视区域 */
+    }
+    
+    .review-card, .game-card {
+        min-width: 100%;
+    }
+} 
